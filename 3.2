@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    int a,b;
+    char oper;
+    cout << "введите последовательно первое, второе  число и операцию (*/-/+/:)"<< endl;
+    cin >> x >> y >> oper;
+    try
+    {
+        if (y == 0,oper== ':')
+        {
+            throw y;
+        }
+        switch(oper)
+        {
+            case '*' :
+                cout << x*y <<endl;
+                break;
+            case '+' :
+                cout << x+y << endl;
+                break;
+            case '-' :
+                cout <<"Результат операции"<< x+y <<endl;
+            case ':' :
+                cout <<"Результат операции"<< x/y << endl;
+            defoult:
+                cout << "enter a number, not a symbol "  << endl;
+               
+        }
+
+    }
+    catch (int y)
+    {
+
+        cout << "don’t divide by zero" << endl;
+
+    }
+    
+    return 0;
+}
