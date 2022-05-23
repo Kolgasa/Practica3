@@ -1,0 +1,26 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main() {
+    
+        system("chcp 65001");
+        int m,d,y,day;
+        cout << "enter your data,format is dd.mm.yyyy" << endl;
+        cin >> d >> m >> y;
+        time_t b_time, nowtime;
+        tm birthday = {0}; 
+
+        birthday.tm_mday = d;
+        birthday.tm_mon = m - 1;
+        birthday.tm_year = y - 1900;
+
+        b_time = mktime(&birthday);
+        nowtime = time(NULL);
+        day=difftime(nowtime, b_time)/86400;
+
+
+        cout << "Number of days lived : " << day << endl;
+    
+    return 0;
+    }
