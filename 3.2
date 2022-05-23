@@ -5,33 +5,33 @@ int main() {
     system("chcp 65001");
     int a,b;
     char oper;
-    cout << "введите последовательно первое, второе  число и операцию (*/-/+/:)"<< endl;
-    cin >> x >> y >> oper;
+    cout << "введите последовательно первое, второе  числа и операцию (*/-/+/:)"<< endl;
+    cin >> a >> b >> oper;
     try
     {
-        if (y == 0,oper== ':')
+        if (b == 0,oper== ':')
         {
-            throw y;
+            throw b;
         }
         switch(oper)
         {
             case '*' :
-                cout << x*y <<endl;
+                cout << a*b <<endl;
                 break;
             case '+' :
-                cout << x+y << endl;
+                cout << a+b << endl;
                 break;
             case '-' :
-                cout <<"Результат операции"<< x+y <<endl;
+                cout <<"Результат операции"<< a+b <<endl;
             case ':' :
-                cout <<"Результат операции"<< x/y << endl;
+                cout <<"Результат операции"<< a/b << endl;
             defoult:
                 cout << "enter a number, not a symbol "  << endl;
                
         }
 
     }
-    catch (int y)
+    catch (int b)
     {
 
         cout << "don’t divide by zero" << endl;
